@@ -205,8 +205,8 @@ def process_stamp():
             filename
         )
 
-        m = re.match(
-            r"^\s*(\d+)",
+        m = re.search(
+            r"(\d+)",
             clean_name
         )
 
