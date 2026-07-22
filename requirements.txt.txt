@@ -1,5 +1,0 @@
-Flask
-PyMuPDF
-pandas
-openpyxl
-gunicorn
