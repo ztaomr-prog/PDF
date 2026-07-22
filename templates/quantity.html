@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Извлечение количества</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+
+            background:#f3f5f7;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:30px;
+
+        }
+
+        .card{
+
+            width:700px;
+            background:white;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+            padding:40px;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#2e7d32;
+            margin-bottom:30px;
+
+        }
+
+        label{
+
+            display:block;
+            margin-top:20px;
+            margin-bottom:8px;
+            font-weight:bold;
+
+        }
+
+        input[type=file]{
+
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+
+        }
+
+        button{
+
+            width:100%;
+            margin-top:35px;
+            padding:16px;
+            border:none;
+            border-radius:8px;
+            background:#2e7d32;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+
+        }
+
+        button:hover{
+
+            background:#256528;
+
+        }
+
+        .back{
+
+            display:inline-block;
+            margin-top:25px;
+            text-decoration:none;
+            color:#1976d2;
+
+        }
+
+        .hint{
+
+            color:#777;
+            font-size:14px;
+            margin-top:8px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>
+
+Извлечение количества из PDF
+
+</h1>
+
+<form
+
+action="/process_quantity"
+
+method="POST"
+
+enctype="multipart/form-data"
+
+>
+
+<label>
+
+Выберите PDF файлы
+
+</label>
+
+<input
+
+type="file"
+
+name="pdfs"
+
+accept=".pdf"
+
+multiple
+
+required
+
+>
+
+<div class="hint">
+
+Можно выбрать сразу несколько PDF файлов.
+
+</div>
+
+<button type="submit">
+
+📊 Извлечь данные
+
+</button>
+
+</form>
+
+<a
+
+class="back"
+
+href="/"
+
+>
+
+← Назад
+
+</a>
+
+</div>
+
+</body>
+
+</html>

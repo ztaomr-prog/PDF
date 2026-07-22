@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Добавить заказ в PDF</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#f3f5f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+
+}
+
+.card{
+
+    width:800px;
+
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    padding:40px;
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#1976d2;
+
+    margin-bottom:30px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+input[type=text]{
+
+    width:100%;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+textarea{
+
+    width:100%;
+
+    height:260px;
+
+    resize:vertical;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-family:Consolas, monospace;
+
+}
+
+input[type=file]{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1976d2;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#125ca8;
+
+}
+
+.example{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    background:#f8f8f8;
+
+    padding:12px;
+
+    border-radius:8px;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    color:#1976d2;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>
+
+Добавление количество в PDF
+
+</h1>
+
+<form
+
+action="/process_stamp"
+
+method="POST"
+
+enctype="multipart/form-data"
+
+>
+
+<label>
+
+Номер заказа
+
+</label>
+
+<input
+
+type="text"
+
+name="order"
+
+placeholder="Например: 12345"
+
+required
+
+>
+
+<label>
+
+Поз. и количество
+
+</label>
+
+<textarea
+
+name="positions"
+
+placeholder="1    4
+2    8
+3    15
+4    2"
+
+required
+
+></textarea>
+
+<div class="example">
+
+<b>Формат:</b><br><br>
+
+1&nbsp;&nbsp;&nbsp;4<br>
+2&nbsp;&nbsp;&nbsp;8<br>
+3&nbsp;&nbsp;&nbsp;15<br>
+4&nbsp;&nbsp;&nbsp;2
+
+<br><br>
+
+или просто вставьте два столбца из Excel.
+
+</div>
+
+<label>
+
+PDF файлы
+
+</label>
+
+<input
+
+type="file"
+
+name="pdfs"
+
+accept=".pdf"
+
+multiple
+
+required
+
+>
+
+<button type="submit">
+
+📝 Обработать PDF
+
+</button>
+
+</form>
+
+<a
+
+class="back"
+
+href="/"
+
+>
+
+← Назад
+
+</a>
+
+</div>
+
+</body>
+
+</html>

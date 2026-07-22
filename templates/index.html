@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Tools</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+
+            background:#f3f5f7;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            height:100vh;
+
+        }
+
+        .card{
+
+            width:650px;
+
+            background:white;
+
+            border-radius:15px;
+
+            padding:50px;
+
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+            text-align:center;
+
+        }
+
+        h1{
+
+            margin-bottom:15px;
+
+            color:#1976d2;
+
+            font-size:38px;
+
+        }
+
+        p{
+
+            color:#666;
+
+            margin-bottom:40px;
+
+            font-size:18px;
+
+        }
+
+        .btn{
+
+            display:block;
+
+            width:100%;
+
+            padding:22px;
+
+            margin-bottom:25px;
+
+            border-radius:10px;
+
+            text-decoration:none;
+
+            color:white;
+
+            font-size:22px;
+
+            transition:.25s;
+
+        }
+
+        .blue{
+
+            background:#1976d2;
+
+        }
+
+        .green{
+
+            background:#2e7d32;
+
+        }
+
+        .btn:hover{
+
+            transform:scale(1.03);
+
+            opacity:.92;
+
+        }
+
+        .footer{
+
+            margin-top:35px;
+
+            color:#999;
+
+            font-size:14px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>PDF Tools</h1>
+
+    <p>
+
+        Выберите инструмент
+
+    </p>
+
+    <a
+        class="btn blue"
+        href="/stamp"
+    >
+
+        📝 Добавить количество в PDF
+
+    </a>
+
+    <a
+        class="btn green"
+        href="/quantity"
+    >
+
+        📊 Извлечь количество из PDF
+
+    </a>
+
+    <div class="footer">
+
+        ЗМК СИСТЕМА © 2026
+
+    </div>
+
+</div>
+
+</body>
+</html>
